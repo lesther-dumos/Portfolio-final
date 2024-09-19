@@ -10647,3 +10647,24 @@
     mixitup.NAME = 'mixitup';
     mixitup.CORE_VERSION = '3.2.1';
 })(window);
+
+// Function to open a specific modal
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+  }
+  
+  // Function to close a specific modal
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+  }
+  
+  // Close the modal when the user clicks outside of it
+  window.onclick = function(event) {
+    const modals = document.getElementsByClassName('modal');
+    for (let i = 0; i < modals.length; i++) {
+      if (event.target === modals[i]) {
+        modals[i].style.display = "none";
+      }
+    }
+  }
+  
