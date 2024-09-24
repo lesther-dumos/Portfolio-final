@@ -10667,4 +10667,9 @@ function openModal(modalId) {
       }
     }
   }
+
+  document.querySelector('.button').addEventListener('click', function(event) {
+    // If there is a preventDefault(), make sure to remove it
+    event.preventDefault(); // Remove this if it exists
+  });
   
